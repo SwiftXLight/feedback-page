@@ -16,6 +16,13 @@ const Pink = styled.img`
     right: 26.24%;
     top: 48.47%;
     bottom: 32.09%;
+    @media screen and (max-width:1300px) {
+        right: 46.24%;
+        top: 63%;
+    }
+    @media screen and (max-width:900px) {
+        display: none;
+    }
 `;
 
 const SmallYellow = styled.img`
@@ -38,6 +45,13 @@ const Yellow = styled.img`
     right: 38.24%;
     top: 45.47%;
     bottom: 32.09%;
+    @media screen and (max-width:1300px) {
+        right: 58.24%;
+        top: 60%;
+    }
+    @media screen and (max-width:900px) {
+        display: none;
+    }
 `;
 
 const Clouds = styled.img`
@@ -52,6 +66,15 @@ const Clouds = styled.img`
 const Map = styled.img`
     position: absolute;
     right: 0;
+    @media screen and (max-width:1320px) {
+        width: 40vw;
+    }
+    @media screen and (max-width:900px) {
+        bottom: 0;
+    }
+    @media screen and (max-width:700px) {
+        display: none;
+    }
 `;
 
 const Sun = styled.img`
