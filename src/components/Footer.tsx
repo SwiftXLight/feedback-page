@@ -8,6 +8,7 @@ const FooterWrapper = styled.div`
   height: 200px;
   background color: #D8D8D8;
   color: #D8D8D8;
+  position: relative;
 `;
 
 const Pink = styled.img`

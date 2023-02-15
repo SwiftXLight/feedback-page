@@ -8,21 +8,24 @@ import sun from './images/circle.svg';
 import map from './images/map.svg';
 
 const MainWrapper = styled.div`
+  position: relative;
 `;
 
 const Pink = styled.img`
     position: absolute;
     z-index: 1;
-    right: 26.24%;
-    top: 48.47%;
-    bottom: 32.09%;
-    @media screen and (max-width:1300px) {
-        right: 46.24%;
-        top: 63%;
-    }
-    @media screen and (max-width:900px) {
-        display: none;
-    }
+    width: 214px !important;
+    height: 214px !important;
+    left: -44px !important;
+    top: 610px !important;
+    // transform: matrix(-0.74, 0.67, 0.67, 0.74, 0, 0);
+    // @media screen and (max-width:1300px) {
+    //     right: 46.24%;
+    //     top: 63%;
+    // }
+    // @media screen and (max-width:900px) {
+    //     display: none;
+    // }
 `;
 
 const SmallYellow = styled.img`
@@ -40,18 +43,18 @@ const SmallYellow = styled.img`
 const Yellow = styled.img`
     position: absolute;
     z-index: 2;
-    width: 127px;
-    height: 127px;
-    right: 38.24%;
-    top: 45.47%;
-    bottom: 32.09%;
-    @media screen and (max-width:1300px) {
-        right: 58.24%;
-        top: 60%;
-    }
-    @media screen and (max-width:900px) {
-        display: none;
-    }
+    width: 127px !important;
+    height: 127px !important;
+    left: -51px !important;
+    top: 568px !important;
+    
+    // @media screen and (max-width:1300px) {
+    //     right: 58.24%;
+    //     top: 60%;
+    // }
+    // @media screen and (max-width:900px) {
+    //     display: none;
+    // }
 `;
 
 const Clouds = styled.img`
@@ -63,18 +66,23 @@ const Clouds = styled.img`
     width: 100vw;
 `;
 
-const Map = styled.img`
+const Map = styled.div`
+    // left: calc(100% - 625px);
+    top: -52px;
+    position: relative;
+    width: 976px;
+    height: 976px;
+    img {
+        width: 1606px;
+        height: 970px;
+        position: absolute;
+        left: -490px;
+        top: -24px;
+    }
+`;
+const OverflowMap = styled.div`
     position: absolute;
-    right: 0;
-    @media screen and (max-width:1320px) {
-        width: 40vw;
-    }
-    @media screen and (max-width:900px) {
-        bottom: 0;
-    }
-    @media screen and (max-width:700px) {
-        display: none;
-    }
+    left: calc(100% - 625px);
 `;
 
 const Sun = styled.img`
@@ -88,12 +96,14 @@ const Sun = styled.img`
 function Main() {
     return (
         <MainWrapper>
-        <SmallYellow src={smallYellowLink} />
-        <Yellow src={yellowLink} />
-        <Pink src={pinkLink} />
-        <Clouds src={clouds} />
-        <Map src={map} />
-        <Sun src={sun} />
+            <SmallYellow src={smallYellowLink} />
+            <Clouds src={clouds} />
+            <OverflowMap>
+                <Yellow src={yellowLink} />
+                <Pink src={pinkLink} />
+                <Map><img src={map} alt='' /></Map>
+            </OverflowMap>
+            <Sun src={sun} />
         </MainWrapper>
     );
 }
