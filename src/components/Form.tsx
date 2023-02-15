@@ -17,6 +17,7 @@ const Input = styled.input`
 `;
 
 const MyForm = styled.form`
+    height: 890px;
     z-index: 9;
     background color: #D8D8D8;
     color: #D8D8D8;

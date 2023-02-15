@@ -5,16 +5,17 @@ import pinkLink from './images/red_cartoon 3.svg';
 import greenLink from './images/green.svg';
 
 const FooterWrapper = styled.div`
-  height: 200px;
-  background color: #D8D8D8;
-  color: #D8D8D8;
+  min-height: 200px;
+  background: #FAFAFA;
+  border: 1px solid #D8D8D8;
   position: relative;
+  overflow: hidden;
 `;
 
 const Pink = styled.img`
   position: absolute;
   left: 1%;
-  bottom: -5.15%;
+  top: -16.5%;
 `;
 
 const SmallYellow = styled.img`
@@ -26,7 +27,6 @@ const SmallYellow = styled.img`
 const Green = styled.img`
   position: absolute;
   right: 10%;
-  bottom: 100px;
 `;
 
 function Footer() {

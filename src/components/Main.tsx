@@ -8,7 +8,7 @@ import sun from './images/circle.svg';
 import map from './images/map.svg';
 
 const MainWrapper = styled.div`
-  position: relative;
+    position: relative;
 `;
 
 const Pink = styled.img`
