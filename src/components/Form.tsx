@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const Input = styled.input`
+    z-index: 10;
     font-family: 'Apercu Arabic Pro';
     font-style: normal;
     font-weight: 400;
@@ -16,6 +17,7 @@ const Input = styled.input`
 `;
 
 const MyForm = styled.form`
+    z-index: 9;
     background color: #D8D8D8;
     color: #D8D8D8;
     display: flex;
@@ -36,6 +38,7 @@ const Title = styled.h1`
 `;
 
 const SubmitButton = styled.button`
+    z-index: 10;
     padding: 28px 52px;
     margin-top: 14px;
     max-width: 220px;
@@ -49,6 +52,9 @@ const SubmitButton = styled.button`
     font-size: 18px;
     line-height: 18px;
     color: #FFFFFF;
+    &:hover {
+        cursor: pointer;
+    }
 `;
 
 function Form() {
