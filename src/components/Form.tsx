@@ -35,6 +35,7 @@ const Title = styled.h1`
     line-height: 130%;
     color: #3E3E3E;
     margin-bottom: 20px;
+    margin-top: 15vh;
 `;
 
 const SubmitButton = styled.button`
