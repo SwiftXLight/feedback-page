@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
@@ -61,12 +62,26 @@ const SubmitButton = styled.button`
 
 function Form() {
     const [name, setName] = useState('');
-    const [mail, setMail] = useState('');
+    const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
-    const handleSubmit = (event: any) => {
+    const handleSubmit = async (event: any) => {
         event.preventDefault();
-        console.log(name, mail, message);
+
+        const newMessage = {
+            name: name,
+            email: email,
+            message: message,
+        };
+
+        axios.post('http://localhost:5000/messages', newMessage)
+        .then((res: any) => {           
+            setName("");
+            setEmail("");
+            setMessage("");
+            console.log(res);
+        })
+        .catch((err: any) => err);       
     }
 
     return (
@@ -80,9 +95,9 @@ function Form() {
             />
             <Input
             type="email" 
-            value={mail}
+            value={email}
             placeholder="Your e-mail*"
-            onChange={(e) => setMail(e.target.value)}
+            onChange={(e) => setEmail(e.target.value)}
             />
             <Input
             type="text" 
