@@ -79,9 +79,9 @@ function Form() {
             setName("");
             setEmail("");
             setMessage("");
-            console.log(res);
+            alert('Your feedback has been successfully sent!')
         })
-        .catch((err: any) => err);       
+        .catch((err: string) => err);       
     }
 
     return (
