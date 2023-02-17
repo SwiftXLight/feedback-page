@@ -1,7 +1,7 @@
 #build stage
 FROM node:18-alpine AS build
 
-WORKDIR /app/backend
+WORKDIR /app
 
 COPY package*.json ./
 
@@ -14,12 +14,12 @@ RUN npm run build
 #prod stage
 FROM node:18-alpine
 
-WORKDIR /app/backend
+WORKDIR /app
 
 ARG NODE_ENV=production
 ARG NODE_ENV={NODE_ENV}
 
-COPY --from=build /app/backend/dist ./dist
+COPY --from=build /app/dist ./dist
 
 COPY package*.json ./
 

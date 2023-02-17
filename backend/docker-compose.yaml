@@ -4,12 +4,12 @@ services:
   backend:
     container_name: nestjs_api
     build:
-      context: .
+      context: /backend
     env_file:
       - .env
     volumes:
-      - ./:/usr/src/app/backend
-      - ./:/usr/src/app/backend/node_modules
+      - .:/usr/app/
+      - node_modules:/usr/app/node_modules
     ports:
       - 5000:5000
       - 9229:9229
