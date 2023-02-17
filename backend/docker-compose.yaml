@@ -16,8 +16,6 @@ services:
     command: npm run start:dev
     depends_on:
       - postgres
-    networks:
-      - nestjs_network
     restart: always
 
   postgres:
@@ -31,8 +29,6 @@ services:
       - 5432:5432
     volumes:
       - pgdata:/var/lib/postgresql/data
-    networks:
-      - nestjs_network
     restart: always
 
 volumes:
