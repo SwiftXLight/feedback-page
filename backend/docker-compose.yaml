@@ -1,8 +1,8 @@
 version: '3.0'
 
 services:
-  main:
-    container_name: main
+  backend:
+    container_name: nestjs_api
     build:
       context: .
     env_file:
@@ -16,7 +16,10 @@ services:
     command: npm run start:dev
     depends_on:
       - postgres
+    networks:
+      - nestjs_network
     restart: always
+
   postgres:
     container_name: database-1.c0ak93sweexj.eu-central-1.rds.amazonaws.com
     image: postgres:12
@@ -28,6 +31,8 @@ services:
       - 5432:5432
     volumes:
       - pgdata:/var/lib/postgresql/data
+    networks:
+      - nestjs_network
     restart: always
 
 volumes:
