@@ -19,7 +19,7 @@ const Input = styled.input`
 
 const MyForm = styled.form`
     height: 890px;
-    z-index: 9;
+    z-index: 10;
     background color: #D8D8D8;
     color: #D8D8D8;
     display: flex;
@@ -27,9 +27,14 @@ const MyForm = styled.form`
     gap: 8px;
     max-width: 560px;
     margin-left: 10vw;
+    margin-right: 10vw;
+    @media (max-width: 700px) {
+        height: 700px;
+    }
 `;
 
 const Title = styled.h1`
+    z-index: 10;
     font-family: 'Apercu Arabic Pro';
     font-style: normal;
     font-weight: 400;
@@ -45,7 +50,6 @@ const SubmitButton = styled.button`
     padding: 28px 52px;
     margin-top: 14px;
     max-width: 220px;
-
     background: #FAD34F;
     border-radius: 500px;
     border: none;

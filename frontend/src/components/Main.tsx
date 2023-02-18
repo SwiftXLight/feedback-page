@@ -18,14 +18,9 @@ const Pink = styled.img`
     height: 214px !important;
     left: -44px !important;
     top: 610px !important;
-    // transform: matrix(-0.74, 0.67, 0.67, 0.74, 0, 0);
-    // @media screen and (max-width:1300px) {
-    //     right: 46.24%;
-    //     top: 63%;
-    // }
-    // @media screen and (max-width:900px) {
-    //     display: none;
-    // }
+    @media (max-width: 1000px) {
+        display:none
+    }
 `;
 
 const SmallYellow = styled.img`
@@ -47,14 +42,9 @@ const Yellow = styled.img`
     height: 127px !important;
     left: -51px !important;
     top: 568px !important;
-    
-    // @media screen and (max-width:1300px) {
-    //     right: 58.24%;
-    //     top: 60%;
-    // }
-    // @media screen and (max-width:900px) {
-    //     display: none;
-    // }
+    @media (max-width: 1000px) {
+        display:none
+    }
 `;
 
 const Clouds = styled.img`
@@ -67,7 +57,6 @@ const Clouds = styled.img`
 `;
 
 const Map = styled.div`
-    // left: calc(100% - 625px);
     top: -52px;
     position: relative;
     width: 976px;
@@ -83,6 +72,9 @@ const Map = styled.div`
 const OverflowMap = styled.div`
     position: absolute;
     left: calc(100% - 625px);
+    @media (max-width: 700px) {
+        display:none
+    }
 `;
 
 const Sun = styled.img`
