@@ -74,7 +74,7 @@ function Form() {
             message: message,
         };
 
-        axios.post('http://localhost:5000/messages', newMessage)
+        axios.post('https://frozen-forest-95134.herokuapp.com/messages', newMessage)
         .then((res: any) => {           
             setName("");
             setEmail("");
